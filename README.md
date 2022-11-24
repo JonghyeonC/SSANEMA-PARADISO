@@ -153,11 +153,23 @@ def recommend(request):
 
 * 사용자 데이터 분석을 위해 단순히 좋아요 버튼만을 만든것이 아니라 "스와이핑" 기능으로 사용자의 편의와 흥미를 고려하였다.
 
+* vue tinder Guide : https://shanlh.github.io/vue-tinder/guide/getting-started.html#installation
+  
+  * vue-tinder 설치하여 사용
+  
+  * npm install vue-tinder --save
+
  
 
 ### 2) 깔라 (Toggle)
 
+* 현재 아이폰, 인스타그램 등 다양한 곳에서 사용하는 다크모드를 응용
 
+* 토글을 이용하여 스타일을 변경시켜 칼라와 흑백으로 디스플레이가 변경되는 기능 추가
+
+* 사용자 선호도에 따라 디스플레이 스타일 변경 가능
+
+* 시각적 흥미 유발
 
 
 
