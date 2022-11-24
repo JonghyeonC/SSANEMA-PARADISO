@@ -123,16 +123,14 @@ def recommend(request):
 
 // 회원 맞춤 영화
     getRecommendMovie(state) {
-      const getRecommendMovie = []
+      const getRecommendMovie = [] // 장르별 영화 
       for (const genre_id in state.user.genre_recommend_dict) {
-        // console.log(genre_id)
+        // recMovie: 장르별 영화 리스트
         const recMovie = state.movies.filter((movie) => {
-          // console.log(movie.genres)
-          if (movie.genres.includes(Number(genre_id))) {
-            return !getRecommendMovie.includes(movie)
+          if (movie.genres.includes(Number(genre_id))) { // 만약 해당 장르일 때
+            return !getRecommendMovie.includes(movie) // 지금까지 최종 리스트(getRecommendMovie)에 없으면 포함 (중복제
           }
         })
-        // console.log(recMovie)
         getRecommendMovie.push(..._.sampleSize(recMovie, state.user.genre_recommend_dict[genre_id]))
       }
       return getRecommendMovie
