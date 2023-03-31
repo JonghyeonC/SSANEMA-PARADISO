@@ -7,7 +7,7 @@ movie_ids = []
 genre_list = []
 
 
-API_KEY = 'f2afac401b045c95588f9124fd3e1840'
+API_KEY = '' # API KEY 생략
 Genre_Url = f'https://api.themoviedb.org/3/genre/movie/list?api_key={API_KEY}&language=ko'
 response_1 = requests.get(Genre_Url).json()
 genres = response_1.get('genres')
